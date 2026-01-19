@@ -1,0 +1,17 @@
+Code reviews in FE
+1. No business logic in selector
+2. In api.js, directly call api (don't make payload or something) (make it in mutation.js)
+3. when there are more than 2 variables, use that in constant not directly
+4. use mapToStateProps: when more than one selectors used in jsx file
+5. use react hook form: to prevent re-rendering of page, and handle validation efficiently.
+6. make use of existing functions rather than making new one
+7. use useCallback: when heavy component and re-renders are less, toh give dependencies in which you want to re-render it
+8. add isObject and isArray check correctly
+9. If 1 line code in a function and it is used only at one place, then instead of making it a function, use that line directly
+10. all similar things like useState should be at same place.
+11. Don't add unnecessary CSS
+12. use ?? instead of ||, since || will return null in case of falsy values or '' etc, but ?? this will return null only when undefined or null
+13. use useMemo: when computation is heavy, and computing again and again.
+14. don't use useEffect unless needed.
+15. do api call in action.js->Sync(describes or triggers something) or mutation.js->Async(calls api or change data) (these are for state management)
+16. Self review 

@@ -1,0 +1,19 @@
+Code reviews in BE
+1. use DRY(don't repeat yourself) principle
+2. use vairable/ configs instead of hard coding something that can be changed in future
+3. make common functions
+4. use map instead of pluck and use things which do less query
+5. compute things previously(using include) instead of computing in loop
+6. use update -> when callbacks required, update_column(s) -> no callbacks(always update updated_at)
+7. api call name: no need of update if patch, create if post, get if get call.
+8. Clear seperation of responsibility (route-> controller-> policy -> helper -> models)
+9. Do validation of everything, never trust client input(can be from FE or from postman)
+10. Do proper logging
+11. Avoid N+1 queries, add indexing
+12. Use trasactions on heavy DB queries.
+13. Make migraitons idempotent
+14. Avoid business logic in controller
+15. Add documentation always
+16. Check for performance
+17. Add comments where things can't be directly understandable
+18. Self review 
